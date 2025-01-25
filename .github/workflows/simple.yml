@@ -16,5 +16,5 @@ jobs:
           echo "Environment Variables"
           env
 
-  deploy:
-    runs-on: ubuntu-latest
+  # deploy:
+  #   runs-on: ubuntu-latest
