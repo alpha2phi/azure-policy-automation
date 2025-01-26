@@ -16,5 +16,13 @@ jobs:
           echo "Environment Variables"
           env
 
-  # deploy:
-  #   runs-on: ubuntu-latest
+  deploy:
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy
+        uses: actions/checkout@v2
+        run: |
+          echo "Deploying to Production environment..."
+      
